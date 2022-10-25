@@ -1,5 +1,9 @@
 div.navbar {
-    background-color: blue;
+    background-color: green;
     color: white;
     font-weight: bold;
+}
+
+ul {
+    list-style: none;
 }
