@@ -4,6 +4,10 @@ div.navbar {
     font-weight: bold;
 }
 
+.navbar h1 {
+    margin: 0;
+}
+
 ul {
     list-style: none;
 }
