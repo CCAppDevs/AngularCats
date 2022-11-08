@@ -1,6 +1,4 @@
-<h1>Reasons I love angular:</h1>
-<ul>
-    <li>one</li>
-    <li>two</li>
-    <li>three</li>
-</ul>
+<h1>{{ heading }}</h1>
+<div>
+    <app-product *ngFor="let item of products" [data]="item"></app-product>
+</div>

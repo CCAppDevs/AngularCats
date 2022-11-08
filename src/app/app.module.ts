@@ -7,15 +7,21 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './Contact/Contact.component';
+import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     NavbarComponent,
     FooterComponent,
     BodyComponent,
-    AboutComponent
-  ],
+    AboutComponent,
+      ContactComponent,
+      ProductComponent,
+      ProductDetailComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule

@@ -1,13 +1,29 @@
-div.navbar {
-    background-color: green;
-    color: white;
-    font-weight: bold;
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 1px 8px #ddd;
 }
 
-.navbar h1 {
-    margin: 0;
+h1.nav-brand {
+    margin-right: auto;
+    font-size: 1.5em;
 }
 
-ul {
+header li {
     list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: #555;
+    transition: all 0.3s ease 0s; 
+}
+
+header a:hover {
+    color: green;
+    font-weight: bold;
 }
