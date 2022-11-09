@@ -21,4 +21,13 @@ export class BodyComponent implements OnInit {
 
   }
 
+  addProduct() {
+    console.log("adding a product");
+    this.heading = "Our New Products";
+    this.products.push({ 
+      id: 4, 
+      name: "New Cat", 
+      description: "This cat is a runtime cat", 
+      imageurl: "https://placekitten.com/256/256?image=4" });
+  }
 }
