@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -8,13 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductDetailComponent implements OnInit {
 
-  products: any[] = [
-    { id: 1, name: "Http Cat", description: "Cats as HTTP Status Codes", imageurl: "https://placekitten.com/256/256?image=3" },
-    { id: 2, name: "CatsAAS", description: "Cats as a service", imageurl: "https://placekitten.com/256/256?image=2"  },
-    { id: 3, name: "CatFacts", description: "Cat Facts!", imageurl: "http://emmamaree.com/wp-content/uploads/2014/07/wpid-wp-1406070870758.jpeg"  }
-  ];
-
-  id = 0;
+  id: any = 0;
 
   data: any = { 
     id: 0,
@@ -24,10 +19,13 @@ export class ProductDetailComponent implements OnInit {
   };
 
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService) { }
 
   ngOnInit(): void {
-    console.log("the route param is:", this.route.snapshot.queryParams);
+    this.id = this.route.snapshot.paramMap.get('productid');
+    this.data = this.productService.getProductById(this.id);
   }
 
 }

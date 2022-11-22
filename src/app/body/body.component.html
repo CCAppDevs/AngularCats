@@ -4,3 +4,20 @@
 </div>
 
 <button (click)="addProduct()">Add Product</button>
+<br>
+<br>
+<div class="cat-fact">
+    <h2>Random Cat Fact of the Day</h2>
+    <p *ngIf="catFact.fact != ''">{{ catFact.fact }}</p>
+    <p *ngIf="catFact.fact == ''">Loading...</p>
+</div>
+<br>
+
+<h2>List of cat facts!</h2>
+<ul>
+    <li *ngFor="let item of catFactList">{{ item.fact }}</li>
+</ul>
+<br>
+<pre>
+{{ catFactList | json }}
+</pre>
